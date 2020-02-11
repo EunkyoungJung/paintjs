@@ -9,15 +9,72 @@ body{
 }
 
 .canvas {
+    background-color: white;
     width: 80%;
     height: 700px;
-    background-color: white;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .controls {
-    margin-top: 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls .controls__range {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.controls .controls__range input {
+    -webkit-appearance: none;
+    background: #d3d3d3;
+    width: 100%;
+    height: 25px;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.controls .controls__range input:hover {
+    opacity: 1;
+}
+
+.controls .controls__range input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    background: #4CAF50;
+    width: 25px;
+    height: 25px;
+
+  }
+
+.controls .controls__btns {
+    margin-bottom: 20px;
+}
+
+.controls__btns button {
+    all: unset;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: white;
+    width: 80px;
+    padding: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 1.2px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.controls__btns button:active {
+    transform: scale(0.90)
 }
 
 .controls .controls__colors {
@@ -25,12 +82,12 @@ body{
 }
 
 .controls__colors .controls__color {
+    cursor: pointer;
     width: 55px;
     height: 55px;
-    border-radius: 50%;
     margin-left: 5px;
     margin-right: 5px;
-    cursor: pointer;
+    border-radius: 50%;
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
